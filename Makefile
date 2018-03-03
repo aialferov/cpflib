@@ -21,7 +21,8 @@ distclean: clean
 	rm -rf $(BUILD_DIR)
 
 version:
-	@erl -noshell \
+	@erl \
+		-noshell \
 		-eval 'io:format("~s~n", [\
 			proplists:get_value(vsn, \
 			element(3, \
