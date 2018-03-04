@@ -1,3 +1,1 @@
-# Cpflib
-
-Common purpose functions library.
+# Common purpose functions library
