@@ -1,13 +1,12 @@
 # Common purpose functions library
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT][MIT badge]][MIT]
 
 Provides various functions to simplify some routines.
 
 ## cpf_funs
 
-[Erlang Funs](http://erlang.org/doc/programming_examples/funs.html) processing
-functions.
+[Erlang Funs] processing functions.
 
 
 ### apply_while
@@ -57,3 +56,10 @@ Fun returns an `ok_condition()`:
 ```
 
 then requesting the Fun result by "Id" returns the "Result" part only.
+
+<!-- Links -->
+[MIT]: https://opensource.org/licenses/MIT
+[Erlang Funs]: http://erlang.org/doc/programming_examples/funs.html
+
+<!-- Badges -->
+[MIT badge]: https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square
