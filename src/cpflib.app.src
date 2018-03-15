@@ -1,7 +1,7 @@
 {application, cpflib, [
     {description, "Common purpose functions library"},
     {id, "cpflib"},
-    {vsn, "1.0.0"},
+    {vsn, "1.1.0"},
     {modules, []},
     {applications, [kernel, stdlib]}
 ]}.
