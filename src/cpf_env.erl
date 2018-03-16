@@ -14,7 +14,7 @@ load([]) -> read_files([]);
 
 load(Paths = [H|_]) when is_list(H) ->
     case read_files(Paths) of
-        {ok, {{_Path, Env}, _Errors}} -> set(Env);
+        {ok, {{Path, Env}, _Errors}} -> {set(Env), Path};
         {error, Errors} -> {error, Errors}
     end;
 
