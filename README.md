@@ -132,7 +132,7 @@ application env if read was successful.
 <!-- Links -->
 [MIT]: https://opensource.org/licenses/MIT
 [Erlang Funs]: http://erlang.org/doc/programming_examples/funs.html
-[Erlang Env]: http://erlang.org/doc/apps/kernel/application.html#set_env-3
+[Erlang Application Env]: http://erlang.org/doc/apps/kernel/application.html#set_env-3
 
 <!-- Badges -->
 [MIT badge]: https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square
