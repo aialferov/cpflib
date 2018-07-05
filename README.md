@@ -56,6 +56,41 @@ Fun returns an `ok_condition()`:
 
 then requesting the Fun result by "Id" returns the "Result" part only.
 
+### apply_on
+
+Applies a function on a second element of tuple if the first element matches
+the specified parameter. Consider the examples:
+
+```
+% Example 1:
+case function() of
+    {ok, Data} -> {ok, handle_data(Data)};
+    {error, Reason} -> {error, Reason}
+end,
+
+% Example 2:
+case function() of
+    {ok, Data} -> {ok, Data};
+    {error, Reason} -> {error, handle_error(Reason)}
+end.
+```
+
+it could be rewritten this way:
+
+```
+% Example 1:
+apply_on(ok, function(), fun handle_data/1),
+
+% Example 2:
+apply_on(error, function(), fun handle_error/1).
+```
+
+To apply a Fun on either of results:
+
+```
+apply_on(function(), fun handle_anything/1).
+```
+
 ## cpf_env
 
 Provides ability to set [Erlang Application Env] from a file or binary data.

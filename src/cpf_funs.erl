@@ -1,7 +1,8 @@
 -module(cpf_funs).
 
 -export([
-    apply_while/1
+    apply_while/1,
+    apply_on/2, apply_on/3
 ]).
 
 -type fun_spec() :: {
@@ -34,3 +35,17 @@ apply_while_arg_fun(Results) -> fun
         end;
     (Arg) -> Arg
 end.
+
+-spec apply_on(Result :: {Status :: term(), Data :: term()}, Fun :: fun()) ->
+    ModifiedResult :: {Status :: term(), ModifiedData :: term()}.
+
+apply_on({Status, Data}, Fun) -> {Status, Fun(Data)}.
+
+-spec apply_on(Status :: term(),
+               Result :: {Status :: term(), Data :: term()},
+               Fun :: fun()
+) ->
+    ModifiedResult :: {Status :: term(), ModifiedData :: term()}.
+
+apply_on(Status, {Status, Data}, Fun) -> {Status, Fun(Data)};
+apply_on(_Status, Result, _Fun) -> Result.
