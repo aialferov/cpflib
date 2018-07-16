@@ -197,10 +197,31 @@ cpf_cmd:run("echo -n $CPF_CMD", [{env, [{"CPF_CMD", "RUN!"}]}]).
 {ok,"RUN!"}
 ```
 
+## cpf_node
+
+Starts or stops an Erlang distribution node.
+
+### start
+
+Start a node ensuring [Epmd] is running:
+
+```
+cpf_node:start(my_project).
+ok
+```
+
+Stop a running node (will not stop running Epmd):
+
+```
+cpf_node:stop().
+ok
+```
+
 <!-- Links -->
 [MIT]: https://opensource.org/licenses/MIT
 [Erlang Funs]: http://erlang.org/doc/programming_examples/funs.html
 [Erlang Application Env]: http://erlang.org/doc/apps/kernel/application.html#set_env-3
+[Epmd]: http://erlang.org/doc/man/epmd.html
 
 <!-- Badges -->
 [MIT badge]: https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square
