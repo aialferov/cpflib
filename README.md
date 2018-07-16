@@ -210,6 +210,8 @@ cpf_node:start(my_project).
 ok
 ```
 
+### stop
+
 Stop a running node (will not stop running Epmd):
 
 ```
