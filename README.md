@@ -164,6 +164,39 @@ The applications "app1" and "app2" env will be set accordingly.
 Reads configuration from binary, file or one of a list of files and sets
 application env if read was successful.
 
+## cpf_cmd
+
+A module for running operating system executables.
+
+### run
+
+Runs an OS executable:
+
+```
+cpf_cmd:run("date").
+{ok,"Mon Jul 16 12:10:17 CEST 2018\n"}
+```
+
+with args:
+
+```
+cpf_cmd:run({"date ~s", ["-u"]}).
+{ok,"Mon Jul 16 10:12:04 UTC 2018\n"}
+```
+
+with options:
+
+```
+cpf_cmd:run("ls -1", [{cd, "/usr/local/Cellar/erlang"}]).
+{ok,"20.1.3\n20.2.2\n21.0\n"}
+
+cpf_cmd:run("echo -n $CPF_CMD").
+ok
+
+cpf_cmd:run("echo -n $CPF_CMD", [{env, [{"CPF_CMD", "RUN!"}]}]).
+{ok,"RUN!"}
+```
+
 <!-- Links -->
 [MIT]: https://opensource.org/licenses/MIT
 [Erlang Funs]: http://erlang.org/doc/programming_examples/funs.html
