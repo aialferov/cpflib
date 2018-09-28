@@ -1,6 +1,7 @@
 # Common purpose functions library
 
-[![License: MIT][MIT badge]][MIT]
+[![License: MIT][MIT Badge]][MIT]
+[![GitHub Release Badge]][GitHub Releases]
 
 Provides various functions to simplify some routines.
 
@@ -221,9 +222,11 @@ ok
 
 <!-- Links -->
 [MIT]: https://opensource.org/licenses/MIT
+[GitHub Releases]: https://github.com/aialferov/cpflib/releases
 [Erlang Funs]: http://erlang.org/doc/programming_examples/funs.html
 [Erlang Application Env]: http://erlang.org/doc/apps/kernel/application.html#set_env-3
 [Epmd]: http://erlang.org/doc/man/epmd.html
 
 <!-- Badges -->
-[MIT badge]: https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square
+[MIT Badge]: https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square
+[GitHub Release Badge]: https://img.shields.io/github/release/aialferov/cpflib/all.svg?style=flat-square
